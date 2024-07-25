@@ -14,8 +14,48 @@
     <meta name="DC.Rights" content="MIT License">
     
     <title>Guía - Licenciatura en Matemática Algorítmica</title>
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+    <link rel="stylesheet" href="https://latex.vercel.app/prism/prism.css">
+    <link rel="stylesheet" href="https://latex.vercel.app/lang/es.css" />
+
 </head>
-<body>
+<body id="top">
+    <header>
+        <h1><span class="latex">L<span>a</span>T<span>e</span>X</span>.<span>C</span>S<span>S</span></h1>
+        <p class="author">Damián</p>
+    </header>
+    <main>
+        <article>            
+            <section>
+                <h2>Primera sección</h2>
+            </section>
+            <div class="theorem">
+                If $S$ is both countable and infinite, then there is a bijection
+                between $S$ and $\boldsymbol{N}$ itself.
+                $$ caracoles $$
+            </div>
+        </article>
+    </main>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'],],
+          },
+        }
+        // Esto es pal cambio de vista 
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+          document.body.classList.toggle('libertinus')
+          typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
     
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
 </body>
 </html>
