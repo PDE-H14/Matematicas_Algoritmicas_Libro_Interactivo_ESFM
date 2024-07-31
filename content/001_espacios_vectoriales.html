@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Libro</title>
+    <script src="assets\scripts.js"></script>
+
+    <script type="text/javascript" src="https://cindyjs.org/dist/latest/Cindy.js"></script>
+    
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+    <link rel="stylesheet" href="https://latex.vercel.app/prism/prism.css">
+    <link rel="stylesheet" href="https://latex.vercel.app/lang/es.css" />
+  </head>
+  <body data-type="book">
+    <div class="container">
+      <section data-type="chapter" id="espacios-vectoriales-76J1hxq"><h1>Espacios Vectoriales</h1>
+</section>
+<a id="prev-link" href="000_Introduccion.html">Previous: Introducción</a>
+
+<a id="next-link" href="002_transformaciones_lineales.html">Next: Transformaciones Lineales</a>
+    </div>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'],],
+          },
+        }
+        // Esto es pal cambio de vista 
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+          document.body.classList.toggle('libertinus')
+          typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+    
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+  </body>
+</html>
