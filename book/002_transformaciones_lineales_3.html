@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Libro</title>
+    <script src="assets\scripts.js"></script>
+
+    <script type="text/javascript" src="https://cindyjs.org/dist/latest/Cindy.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+    
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+    <link rel="stylesheet" href="https://latex.vercel.app/prism/prism.css">
+    <link rel="stylesheet" href="https://latex.vercel.app/lang/es.css" />
+  </head>
+  <body data-type="book">
+    <div class="container">
+      <section data-type="chapter" id="transformaciones-lineales-AMr5Cmj">
+
+<h1>Transformaciones lineales</h1>
+
+<div class="definition">
+    Sean $V$ y $W$ dos espacios vectoriales sobre un mismo campo $\mathbb{F}$. Decimos que una función $T:V\rightarrow W$
+    es una <b>transformación lineal</b> si satisface las siguientes dos propiedades:
+    <ol>
+    <li>$$T(v+w)=T(v)+T(w)$$ para cada $v,w\in V$</li>
+    <li>$$T(cv)=cT(w)$$ para cada $v\in V$ y $c\in\mathbb{F}$</li>
+    </ol>
+</div>
+
+<div id="jxgbox" class="jxgbox" style="width:500px; height:500px;"></div>
+
+<script>
+    var edge = 7; 
+    var board = JXG.JSXGraph.initBoard('jxgbox', {
+            boundingbox: [-edge, edge, edge, -edge],
+            showCopyright:false,
+            axis:true,
+            keepaspectratio: true
+        });
+    var colorStr = '#68B1FF';
+
+    var slider = board.create('slider',[[-5,-4],[5,-4],[0,0,360]], {name:'Ángulo'});
+
+    var head = board.create('circle',
+                            [function(){ return [1*Math.cos(2*Math.PI*(slider.Value()/360)) - 2.6*Math.sin(2*Math.PI*(slider.Value()/360)), 1*Math.sin(2*Math.PI*(slider.Value()/360)) + 2.6*Math.cos(2*Math.PI*(slider.Value()/360))]},
+                            0.4],
+                            {fillColor: colorStr, name:''});
+
+    var leg1 = board.create('line',
+                            [[0,0],
+                            function(){ return [1*Math.cos(2*Math.PI*(slider.Value()/360)) - 1*Math.sin(2*Math.PI*(slider.Value()/360)), 1*Math.sin(2*Math.PI*(slider.Value()/360)) + 1*Math.cos(2*Math.PI*(slider.Value()/360))]}],
+                            {straightFirst:false, straightLast:false, strokeWidth:2});
+
+    var leg2 = board.create('line',
+                            [function(){ return [2*Math.cos(2*Math.PI*(slider.Value()/360)) - 0*Math.sin(2*Math.PI*(slider.Value()/360)), 2*Math.sin(2*Math.PI*(slider.Value()/360)) + 0*Math.cos(2*Math.PI*(slider.Value()/360))]},
+                            function(){ return [1*Math.cos(2*Math.PI*(slider.Value()/360)) - 1*Math.sin(2*Math.PI*(slider.Value()/360)), 1*Math.sin(2*Math.PI*(slider.Value()/360)) + 1*Math.cos(2*Math.PI*(slider.Value()/360))]}],
+                            {straightFirst:false, straightLast:false, strokeWidth:2});
+    
+    var body = board.create('line',
+                            [function(){ return [1*Math.cos(2*Math.PI*(slider.Value()/360)) - 1*Math.sin(2*Math.PI*(slider.Value()/360)), 1*Math.sin(2*Math.PI*(slider.Value()/360)) + 1*Math.cos(2*Math.PI*(slider.Value()/360))]},
+                            function(){ return [1*Math.cos(2*Math.PI*(slider.Value()/360)) - 2*Math.sin(2*Math.PI*(slider.Value()/360)), 1*Math.sin(2*Math.PI*(slider.Value()/360)) + 2*Math.cos(2*Math.PI*(slider.Value()/360))]}],
+                            {straightFirst:false, straightLast:false, strokeWidth:2});
+
+    var arms = board.create('line',
+                            [function(){ return [0*Math.cos(2*Math.PI*(slider.Value()/360)) - 2*Math.sin(2*Math.PI*(slider.Value()/360)), 0*Math.sin(2*Math.PI*(slider.Value()/360)) + 2*Math.cos(2*Math.PI*(slider.Value()/360))]},
+                            function(){ return [2*Math.cos(2*Math.PI*(slider.Value()/360)) - 2*Math.sin(2*Math.PI*(slider.Value()/360)), 2*Math.sin(2*Math.PI*(slider.Value()/360)) + 2*Math.cos(2*Math.PI*(slider.Value()/360))]}],
+                            {straightFirst:false, straightLast:false, strokeWidth:2});
+
+</script>
+
+</section>
+<a id="prev-link" href="002_transformaciones_lineales_2.html">Anterior: Transformaciones lineales</a>
+
+    </div>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'],],
+          },
+        }
+        // Esto es pal cambio de vista 
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+          document.body.classList.toggle('libertinus')
+          typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+    
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+  </body>
+</html>
