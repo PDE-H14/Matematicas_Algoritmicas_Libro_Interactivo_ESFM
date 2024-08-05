@@ -1,0 +1,53 @@
+
+<head>
+
+    <script type="text/javascript" src="https://cindyjs.org/dist/latest/Cindy.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+    
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+    <link rel="stylesheet" href="https://latex.vercel.app/prism/prism.css">
+    <link rel="stylesheet" href="https://latex.vercel.app/lang/es.css" />
+    
+
+    <script>
+        MathJax = {
+            tex: {
+            inlineMath: [['$', '$'],],
+            },
+        }
+        // Esto es pal cambio de vista 
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+    
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+
+</head>
+
+<section data-type="chapter">
+
+<h1>Transformaciones lineales</h1>
+
+<div class="definition">
+    Sean $V$ y $W$ dos espacios vectoriales sobre un mismo campo $\mathbb{F}$. Decimos que una función $T:V\rightarrow W$
+    es una <b>transformación lineal</b> si satisface las siguientes dos propiedades:
+    <ol>
+    <li>$$T(v+w)=T(v)+T(w)$$ para cada $v,w\in V$</li>
+    <li>$$T(cv)=cT(w)$$ para cada $v\in V$ y $c\in\mathbb{F}$</li>
+    </ol>
+</div>
+
+<div id="jxgbox" class="jxgbox" style="width:500px; height:500px;"></div>
+
+<script src= "../javascripts/applets/002_transformaciones_lineales_3_01.js"></script>
+
+</section>
