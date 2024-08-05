@@ -1,6 +1,6 @@
 {
   "title" : "Libro",
-  "destination" : "build/:build",
+  "destination" : "./book",
   "files" : [
     "content/toc.html",
     "content/*.html"
