@@ -3,8 +3,7 @@
   "destination" : "build/:build",
   "files" : [
     "content/toc.html",
-    "content/first-chapter.md",
-    "content/second-chapter.html"
+    "content/*.html"
   ],
   "builds" : [
     {
