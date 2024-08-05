@@ -8,13 +8,6 @@
   ],
   "builds" : [
     {
-      "format" : "pdf",
-      "layout" : "layouts/pdf.html",
-      "stylesheets" : {
-        "files" : ["stylesheets/pdf.scss"]
-      }
-    },
-    {
       "format" : "html",
       "layout" : "layouts/html.html",
       "stylesheets" : {
