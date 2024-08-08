@@ -1,5 +1,5 @@
 var edge = 7; 
-    var board = JXG.JSXGraph.initBoard('jxgbox', {
+    var board = JXG.JSXGraph.initBoard('rotationbox', {
             boundingbox: [-edge, edge, edge, -edge],
             showCopyright:false,
             axis:true,
