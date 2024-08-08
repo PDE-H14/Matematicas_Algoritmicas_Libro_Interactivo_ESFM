@@ -3,7 +3,14 @@ var edge = 7;
             boundingbox: [-edge, edge, edge, -edge],
             showCopyright:false,
             axis:true,
-            keepaspectratio: true
+            keepaspectratio: true,
+            pan: {
+                enabled: false
+            },
+            browserPan: false,
+            zoom: {
+                enabled: false
+            },
         });
     var colorStr = '#68B1FF';
 
