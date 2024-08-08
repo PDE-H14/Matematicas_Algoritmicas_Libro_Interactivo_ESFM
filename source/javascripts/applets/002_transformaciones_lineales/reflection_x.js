@@ -5,11 +5,11 @@ var board = JXG.JSXGraph.initBoard('reflection_x_box', {
         axis:true,
         keepaspectratio: true,
         pan: {
-            enable: false
+            enabled: false
         },
         browserPan: false,
         zoom: {
-            enable: false
+            enabled: false
         },
     });
 
