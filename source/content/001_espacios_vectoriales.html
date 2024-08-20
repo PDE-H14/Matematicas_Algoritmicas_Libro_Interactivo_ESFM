@@ -1,11 +1,161 @@
 <head>
+
+    <script type="text/javascript" src="https://cindyjs.org/dist/latest/Cindy.js"></script>
     <script type="text/javascript" charset="UTF-8" src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+    
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+    <link rel="stylesheet" href="https://latex.vercel.app/prism/prism.css">
+    <link rel="stylesheet" href="https://latex.vercel.app/lang/es.css" />
+    
+
+    <script>
+        MathJax = {
+            tex: {
+            inlineMath: [['$', '$'],],
+            },
+        }
+        // Esto es pal cambio de vista 
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+    
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+
 </head>
 
-
 <section data-type="chapter">
+
     <h1>Espacios vectoriales</h1>
+
+    <section data-type="sect2">
+
+    <h2>Introducción</h2>
+
+    <p>El <b>Álgebra Lineal</b> es una de las ramas de las matemáticas que en un principio se enfocaba en el estudio de $\mathbb{R}^n$.
+        Sin embargo, a diferencia del <b>Cálculo multivariable</b>, el Álgebra lineal se enfocó principalmente en el estudio de las
+        propiedades algebraicas de $\mathbb{R}^n$ y no tanto en su topología o análisis de sus funciones.
+    </p>
+
+    <div class="definition">
     
+    <b> El espacio $\mathbb{R}^n$.</b>
+    
+    <p>
+    Sea $n\in\mathbb{N}$. Se define al espacio $\mathbb{R}^n$ como aquel conjunto:
+    
+    $$\mathbb{R}^{n}:=\prod_{1\leq i\leq n}{\mathbb{R}}$$
+    
+    Junto con este, se definen las operaciones <b>suma</b> y <b>producto por escalar</b> respectivamente como:
+    
+    $$+:\mathbb{R}^n \times\mathbb{R}^n \rightarrow\mathbb{R}^n$$
+    $$(x=(x_1, \dots , x_n), y=(y_1, \dots , y_n))\mapsto x+y:=(x_1+y_1,\dots ,x_n+y_n)$$
+    
+    $$\cdot : \mathbb{R}\times\mathbb{R}^n \rightarrow\mathbb{R}^n$$
+    $$\left(\alpha,x=(x_{1},\dots,x_{n})\right)\mapsto\alpha x:=\left(\alpha x_{1},\dots\cdot,\alpha x_{n}\right)$$
+    </p>
+    
+    </div>
+    
+    <p>
+    Este tipo de espacio tiene propiedades las cuales se comportan muy bien por separado y juntas.
+    </p>
+
+    <div class="theorem">
+
+    <b>Propiedades de la suma</b>
+
+    <p>
+    Sea $n\in\mathbb{N}$, entonces $\left(\mathbb{R}^n, +\right)$ es un grupo abeliano, es decir:
+    <ol>
+        <li>
+            (<b>conmutatividad</b>) para cada $x,y\in\mathbb{R}^n$, $x+y = y+x$.
+        </li>
+        <li>
+            (<b>asociatividad</b>) para cada $x,y\in\mathbb{R}^n$, $(x+y)+z=x+(y+z)$.
+        </li>
+        <li>
+            (existencia del elemento <b>neutro</b>) existe $O\in\mathbb{R}^n$ tal que para cada $x\in\mathbb{R}^n$, $x+O=O+x=x$.
+        </li>
+        <li>
+            (existencia de <b>inversos</b>) para cada $x\in\mathbb{R}^n$ existe $y\in\mathbb{R}^n$ tal que $x+y=y+x=O$.
+        </li>
+    </ol>
+    </p>
+    </div>
+
+    <div class="theorem">
+    
+    <b>Propiedades del producto escalar</b>
+
+    <p>
+    Sea $n\in\mathbb{N}$, entonces $\mathbb{R}^n$ satiface lo siguiente:
+    <ol>
+        <li>
+            (<b>distributividad</b> por suma de vectores) para cada $\alpha\in\mathbb{R}$ y cada $x,y\in\mathbb{R}^n$, $\alpha (x+y)=\alpha x + \alpha y$.
+        </li>
+        <li>
+            (<b>distributividad </b> por suma de escalares) para cada $\alpha,\beta\in\mathbb{R}$ y cada $x\in\mathbb{R}^n$, $(\alpha+\beta)x = \alpha x+\beta x$
+        </li>
+        <li>
+            (<b>pseudoasociatividad</b>) para cada $\alpha,\beta\in\mathbb{R}$ y cada $x\in\mathbb{R}^n$, $\alpha(\beta x) = (\alpha\beta) x$
+        </li>
+        <li>
+            (acción de la <b>unidad</b>) para cada $x\in\mathbb{R}^n$, $1x=x$.
+        </li>
+    </ol>
+    </p>
+    
+    </div>
+
+    <p><b>Applet interactivo de la suma de vectores en $\mathbb{R}^2$.</b></p>
+
+    <div id="addbox" class="jxgbox" style="width:500px; height:500px; border: 2px solid black;"></div>
+
+    <script src="../javascripts/applets/001_espacios_vectoriales/add.js"></script>
+
+    <p><b>Applet interactivo de la resta de vectores en $\mathbb{R}^2$.</b></p>
+
+    <div id="subbox" class="jxgbox" style="width:500px; height:500px; border: 2px solid black;"></div>
+
+    <script src="../javascripts/applets/001_espacios_vectoriales/sub.js"></script>
+
+    <p>
+    Una forma de generalizar la idea de los espacios $\mathbb{R}^n$ es por medio de los espacios $\mathbb{F}^n$, donde $\mathbb{F}$ es un campo cualquiera.
+    Recordemos que un campo es un conjunto que satisface las mismas propiedades algebraicas que $\mathbb{R}$, es decir, tiene dos
+    operaciones (suma y producto) las cuales satisfacen que $\mathbb{F}$ es un grupo abeliano bajo la suma, $\mathbb{F}^*$ es un grupo
+    abeliano bajo el producto y el producto es distributivo sobre la suma.
+    </p>
+
+    <div class="definition">
+    
+        <b> El espacio $\mathbb{F}^n$.</b>
+        
+        <p>
+        Sea $n\in\mathbb{N}$. Se define al espacio $\mathbb{F}^n$ como aquel conjunto:
+        
+        $$\mathbb{F}^{n}:=\prod_{1\leq i\leq n}{\mathbb{F}}$$
+        
+        Junto con este, se definen las operaciones <b>suma</b> y <b>producto por escalar</b> respectivamente como:
+        
+        $$+:\mathbb{F}^n \times\mathbb{F}^n \rightarrow\mathbb{F}^n$$
+        $$(x=(x_1, \dots , x_n), y=(y_1, \dots , y_n))\mapsto x+y:=(x_1+y_1,\dots ,x_n+y_n)$$
+        
+        $$\cdot : \mathbb{F}\times\mathbb{F}^n \rightarrow\mathbb{F}^n$$
+        $$\left(\alpha,x=(x_{1},\dots,x_{n})\right)\mapsto\alpha x:=\left(\alpha x_{1},\dots\cdot,\alpha x_{n}\right)$$
+        </p>
+        
+        </div>
+
+    </section>
     <section data-type="sect2">
     <h2>Espacios afines</h2>
 
