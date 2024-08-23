@@ -69,6 +69,8 @@
     Este tipo de espacio tiene propiedades las cuales se comportan muy bien por separado y juntas.
     </p>
 
+    <a id="teo_001_01"></a>
+    
     <div class="theorem">
 
     <b>Propiedades de la suma</b>
@@ -92,6 +94,7 @@
     </p>
     </div>
 
+    <a id="teo_001_02"></a>
     <div class="theorem">
     
     <b>Propiedades del producto escalar</b>
@@ -153,7 +156,55 @@
         $$\left(\alpha,x=(x_{1},\dots,x_{n})\right)\mapsto\alpha x:=\left(\alpha x_{1},\dots\cdot,\alpha x_{n}\right)$$
         </p>
         
-        </div>
+    </div>
+
+    <p>
+        Dado que en los teoremas <a href="#teo_001_01" data-type="xref">1</a>  y <a href="#teo_001_02" data-type="xref">2</a> 
+        no se usan más propiedades de $\mathbb{R}$ fuera de las propiedades de campo, estos mismos teoremas se satisfacen
+        sobre $\mathbb{F}$. Puesto que estos teoremas se satisfacen sobre cualquier campo $\mathbb{F}$, eso implica que pueden
+        haber otros conjuntos los cuales satisfagan tales propiedades. Sin embargo, notemos que estos conjuntos deberían depender
+        de un campo $\mathbb{F}$, puesto que de ello depende la operación de producto por escalar.
+        Por lo tanto, utilizando tales teoremas como axiomas es que se define el concepto de <b><i>espacio vectorial</i></b>.
+    </p>
+
+    <div class="definition">
+        <b>Espacio vectorial</b>
+        
+        <p>
+        Sean $V$ un conjunto no vacío y $\mathbb{F}$ un campo. Decimos que $V$ es un espacio vectorial sobre $\mathbb{F}$,
+        o más simplificadamente, un $\mathbb{F}$-espacio vectorial si existen dos operaciones: suma y producto por escalar;
+        $+:V^2\rightarrow V$ tal que $(v,w) \mapsto v+w$ y $\cdot : \mathbb{F}\times V\rightarrow V$ tal que 
+        $(\alpha, v) \mapsto \alpha v$ las cuales satisfacen lo siguiente:
+        </p>
+
+        <ol>
+            <li>
+                $(V, +)$ es un grupo abeliano.
+            </li>
+            <li>
+                (<b>distributividad</b> por suma de <b>vectores</b>) para cada $\alpha\in\mathbb{F}$ y cada $v,w\in\mathbb{V}$,
+                $\alpha(v+w)=\alpha v + \alpha w$.
+            </li>
+            <li>
+                (<b>distributividad</b> por suma de <b>escalares</b>) para cada $\alpha,\beta\in\mathbb{F}$ y cada $v\in V$,
+                $(\alpha+\beta)v=\alpha v + \beta v$.
+            </li>
+            <li>
+                (<b>pseudoasociatividad</b>) para cada $\alpha, \beta\in\mathbb{F}$ y cada $v\in V$, $(\alpha\beta)v=\alpha(\beta v)$.
+            </li>
+            <li>
+                (acción de la <b>unidad</b>) para cada $v\in V$, $1v=v$.
+            </li>
+        </ol>
+
+        En tal caso, a cada $v\in V$ se le denomina vector y a cada $\alpha\in\mathbb{F}$ se le denomina escalar.
+    </div>
+
+    <p>
+        Con esta definición, tenemos que para cada $n\in \mathbb{N}$ y cada $\mathbb{F}$ un campo, $\mathbb{F}^n$ es un
+        $\mathbb{F}$-espacio vectorial justamente por lo que mencionamos anteriormente.
+        Aunque, por la definición existen muchos más espacios vectoriales.
+    </p>
 
     </section>
     <section data-type="sect2">
