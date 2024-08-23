@@ -18,13 +18,13 @@ var board = JXG.JSXGraph.initBoard('subbox', {
 var origin_sub = board.create('point', [0,0], {name:'', fixed: true, color:'#000000', size: 0.00001});
 
 // Punto x y su flecha asociada
-var x_sub = board.create('point', [-2,-1],{name:'$x$', fixed: false, color:'#93e3af'});
+var x_sub = board.create('point', [-1,3],{name:'$x$', fixed: false, color:'#93e3af'});
 
 var x_vec_sub = board.create('line',[x_sub, origin_sub], {straightFirst:false, straightLast:false, color:'#47b4a4',
                             firstArrow: {type: 1}});
 
 // Punto 'y' y su flecha asociada
-var y_sub = board.create('point', [2,3],{name:'$y$', fixed: false, color:'#83c4e9'});
+var y_sub = board.create('point', [2,2],{name:'$y$', fixed: false, color:'#83c4e9'});
 
 var y_vec_sub = board.create('line',[y_sub, origin_sub], {straightFirst:false, straightLast:false, color:'#24bdf5',
                                                         firstArrow: {type: 1}});
