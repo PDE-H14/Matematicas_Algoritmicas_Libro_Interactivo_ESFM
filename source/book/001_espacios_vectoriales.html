@@ -188,6 +188,72 @@
         Aunque, por la definición existen muchos más espacios vectoriales.
     </p>
 
+    <div class="definition">
+        <b>Matriz</b>
+
+        <p>
+        Sea $n,m\in\mathbb{N}^*$ y $A$ un conjunto no vacío. Se define a una <b>matriz</b> de tamaño $n\times m$ con <b>coeficientes</b>
+        en $A$ como una función $M:\{1,\cdots,n\} \times \{1,\cdots,m\} \rightarrow A$.
+        A $n$ se le llama número de filas de $M$ y a $m$ se le denomina número de columnas. En general, en vez de escribir $M(i,j)$
+        para cada $1\leq i \leq n$ y $1\leq j \leq m$, se denotará por $M_{ij}$ o $M_{i,j},$ donde a $M_{ij}$ le denominaremos
+        <b>entrada de la matriz</b> $M$ en la posición $i,j$.
+        </p>
+
+        <p>
+        Definimos al conjunto de matrices de tamaño $n \times m$ sobre $A$ como
+
+        $$\mathcal{M}_{n,m}(A) :=\{M:\{1,\cdots,n\} \times \{1,\cdots,m\} \rightarrow A : M \text{ es una función} \}$$
+        </p>
+
+        <p>Si $n=m$, se denota $\mathcal{M}_{n}(A)=\mathcal{M}_{n,n}(A)$.</p>
+
+        <p>
+        Por lo general, se denotará a una matriz $M\in\mathcal{M}_{n,m}(A)$ como un arreglo bidimensional de la siguiente forma:
+        
+        $$M=\left[\begin{array}{c l l}{{{M}_{11}}}&{{\cdots}}&{{{M}_{1m}}}\\ {{{M}_{21}}}&{{\cdots}}&{{{M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{M}_{n1}}}&{{\cdots}}&{{{M}_{n m}}}\end{array}\right]
+        $$
+
+        Y por abuso de notación diremos que tal arreglo <i>"es"</i> la matriz.
+        </p>
+
+        <div class="definition">
+
+        <b>Operaciones sobre  $\mathcal{M}_{n,m}(A)$</b>
+        
+        <p>
+        Sean $n,m\in\mathbb{N}$ y $R$ un anillo. Se definen las operaciones suma 
+        $+:\mathcal{M}_{n,m}(R) \times \mathcal{M}_{n,m}(R) \rightarrow \mathcal{M}_{n,m}(R)$ y producto por escalar
+        $\cdot :R \times\mathcal{M}_{n,m}(R)\rightarrow\mathcal{M}_{n,m}(R)$ tales que para cada $1\leq i \leq n$ y $1\leq j \leq m$ 
+        y $\alpha\in R:$
+        </p>
+
+        $$(M+N)_{ij}:=M_{ij}+N_{ij}$$
+        $$(\alpha M_{ij}):=\alpha M_{ij}$$ 
+
+        </div>
+        <p> Usando la notación de arreglo bidimensional, se tiene lo siguiente:</p>
+        $$M+N=\left[\begin{array}{c l l}{{{M}_{11}}}&{{\cdots}}&{{{M}_{1m}}}\\ {{{M}_{21}}}&{{\cdots}}&{{{M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{M}_{n1}}}&{{\cdots}}&{{{M}_{n m}}}\end{array}\right]
+        + \left[\begin{array}{c l l}{{{N}_{11}}}&{{\cdots}}&{{{N}_{1m}}}\\ {{{N}_{21}}}&{{\cdots}}&{{{N}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{N}_{n1}}}&{{\cdots}}&{{{N}_{n m}}}\end{array}\right]
+        = \left[\begin{array}{c l l}{{{M}_{11}+{N}_{11}}}&{{\cdots}}&{{{M}_{1m}+{N}_{1m}}}\\ {{{M}_{21}+{N}_{21}}}&{{\cdots}}&{{{M}_{2m}+{N}_{2m}}}\\ {{\vdots}}&{{\cdots}}&{{\vdots}}\\ {{{M}_{n1}+{N}_{n1}}}&{{\cdots}}&{{{M}_{n m}+{N}_{n m}}}\end{array}\right]
+        $$
+
+        $$\alpha M=\alpha\left[\begin{array}{c l l}{{{M}_{11}}}&{{\cdots}}&{{{M}_{1m}}}\\ {{{M}_{21}}}&{{\cdots}}&{{{M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{M}_{n1}}}&{{\cdots}}&{{{M}_{n m}}}\end{array}\right]
+        =\left[\begin{array}{c l l}{{{\alpha M}_{11}}}&{{\cdots}}&{{{\alpha M}_{1m}}}\\ {{{\alpha M}_{21}}}&{{\cdots}}&{{{\alpha M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{\alpha M}_{n1}}}&{{\cdots}}&{{{\alpha M}_{n m}}}\end{array}\right]$$
+    </div>
+
+    <p>
+    A partir de ahora, en vez de denotar a los vectores en $\mathbb{F}^n$ como $n$-tuplas de la forma $(x_1, \cdots, x_n) \in \mathbb{F}^n$
+    los denotaremos por matrices en $\mathcal{M}_{n,1}(\mathbb{F})$ dando la forma 
+    $\begin{bmatrix}
+    x_{1} \\
+    \vdots \\
+    x_{n}
+    \end{bmatrix}$.
+
+    Usarlos de esta forma nos será de mucha conveniencia y como veremos más adelante, estos dos espacios ($\mathbb{F}^n$ y $\mathcal{M}_{n,1}(\mathbb{F})$) son isomorfos, es decir, que en esencia son el mismo conjunto y por tanto
+    podemos de cierta manera usarlos intercambiablemente.
+    
+    </p>
     </section>
     <section data-type="sect2" id="espacios-afines-M64lh76">
     <h2>Espacios afines</h2>
