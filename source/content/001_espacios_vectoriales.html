@@ -228,7 +228,13 @@
         <p>
         Por lo general, se denotará a una matriz $M\in\mathcal{M}_{n,m}(A)$ como un arreglo bidimensional de la siguiente forma:
         
-        $$M=\left[\begin{array}{c l l}{{{M}_{11}}}&{{\cdots}}&{{{M}_{1m}}}\\ {{{M}_{21}}}&{{\cdots}}&{{{M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{M}_{n1}}}&{{\cdots}}&{{{M}_{n m}}}\end{array}\right]
+        $$M=
+        \begin{bmatrix}
+        M_{11} & \cdots & M_{1m}\\
+        M_{21} & \cdots & M_{2m}\\
+        \vdots & \ddots & \vdots \\
+        M_{n1} & \cdots & M_{nm}
+        \end{bmatrix}
         $$
 
         Y por abuso de notación diremos que tal arreglo <i>"es"</i> la matriz.
@@ -250,13 +256,42 @@
 
         </div>
         <p> Usando la notación de arreglo bidimensional, se tiene lo siguiente:</p>
-        $$M+N=\left[\begin{array}{c l l}{{{M}_{11}}}&{{\cdots}}&{{{M}_{1m}}}\\ {{{M}_{21}}}&{{\cdots}}&{{{M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{M}_{n1}}}&{{\cdots}}&{{{M}_{n m}}}\end{array}\right]
-        + \left[\begin{array}{c l l}{{{N}_{11}}}&{{\cdots}}&{{{N}_{1m}}}\\ {{{N}_{21}}}&{{\cdots}}&{{{N}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{N}_{n1}}}&{{\cdots}}&{{{N}_{n m}}}\end{array}\right]
-        = \left[\begin{array}{c l l}{{{M}_{11}+{N}_{11}}}&{{\cdots}}&{{{M}_{1m}+{N}_{1m}}}\\ {{{M}_{21}+{N}_{21}}}&{{\cdots}}&{{{M}_{2m}+{N}_{2m}}}\\ {{\vdots}}&{{\cdots}}&{{\vdots}}\\ {{{M}_{n1}+{N}_{n1}}}&{{\cdots}}&{{{M}_{n m}+{N}_{n m}}}\end{array}\right]
+        $$M+N=
+        \begin{bmatrix}
+        M_{11} & \cdots & M_{1m}\\
+        M_{21} & \cdots & M_{2m}\\
+        \vdots & \ddots & \vdots \\
+        M_{n1} & \cdots & M_{nm}
+        \end{bmatrix}+
+        \begin{bmatrix}
+        N_{11} & \cdots & N_{1m}\\
+        N_{21} & \cdots & N_{2m}\\
+        \vdots & \ddots & \vdots \\
+        N_{n1} & \cdots & N_{nm}
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+        M_{11}+N_{11} & \cdots & M_{1m}+N_{1m}\\
+        M_{21}+N_{21} & \cdots & M_{2m}+N_{2m}\\
+        \vdots & \ddots & \vdots \\
+        M_{n1}+N_{n1} & \cdots & M_{nm}+N_{nm}
+        \end{bmatrix}
         $$
 
-        $$\alpha M=\alpha\left[\begin{array}{c l l}{{{M}_{11}}}&{{\cdots}}&{{{M}_{1m}}}\\ {{{M}_{21}}}&{{\cdots}}&{{{M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{M}_{n1}}}&{{\cdots}}&{{{M}_{n m}}}\end{array}\right]
-        =\left[\begin{array}{c l l}{{{\alpha M}_{11}}}&{{\cdots}}&{{{\alpha M}_{1m}}}\\ {{{\alpha M}_{21}}}&{{\cdots}}&{{{\alpha M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{\alpha M}_{n1}}}&{{\cdots}}&{{{\alpha M}_{n m}}}\end{array}\right]$$
+        $$\alpha M=\alpha
+        \begin{bmatrix}
+        M_{11} & \cdots & M_{1m}\\
+        M_{21} & \cdots & M_{2m}\\
+        \vdots & \ddots & \vdots \\
+        M_{n1} & \cdots & M_{nm}
+        \end{bmatrix}=
+        \begin{bmatrix}
+        \alpha M_{11} & \cdots & \alpha M_{1m}\\
+        \alpha M_{21} & \cdots & \alpha M_{2m}\\
+        \vdots & \ddots & \vdots \\
+        \alpha M_{n1} & \cdots & \alpha M_{nm}
+        \end{bmatrix}
+        $$
     </div>
 
     <p>

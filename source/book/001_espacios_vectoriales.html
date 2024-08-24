@@ -195,7 +195,7 @@
         Sea $n,m\in\mathbb{N}^*$ y $A$ un conjunto no vacío. Se define a una <b>matriz</b> de tamaño $n\times m$ con <b>coeficientes</b>
         en $A$ como una función $M:\{1,\cdots,n\} \times \{1,\cdots,m\} \rightarrow A$.
         A $n$ se le llama número de filas de $M$ y a $m$ se le denomina número de columnas. En general, en vez de escribir $M(i,j)$
-        para cada $1\leq i \leq n$ y $1\leq j \leq m$, se denotará por $M_{ij}$ o $M_{i,j},$ donde a $M_{ij}$ le denominaremos
+        para cada $1\leq i \leq n$ y $1\leq j \leq m$, se denotará por $M_{ij}$ o $M_{i,j}$, donde a $M_{ij}$ le denominaremos
         <b>entrada de la matriz</b> $M$ en la posición $i,j$.
         </p>
 
@@ -210,7 +210,13 @@
         <p>
         Por lo general, se denotará a una matriz $M\in\mathcal{M}_{n,m}(A)$ como un arreglo bidimensional de la siguiente forma:
         
-        $$M=\left[\begin{array}{c l l}{{{M}_{11}}}&{{\cdots}}&{{{M}_{1m}}}\\ {{{M}_{21}}}&{{\cdots}}&{{{M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{M}_{n1}}}&{{\cdots}}&{{{M}_{n m}}}\end{array}\right]
+        $$M=
+        \begin{bmatrix}
+        M_{11} &amp; \cdots &amp; M_{1m}\\
+        M_{21} &amp; \cdots &amp; M_{2m}\\
+        \vdots &amp; \ddots &amp; \vdots \\
+        M_{n1} &amp; \cdots &amp; M_{nm}
+        \end{bmatrix}
         $$
 
         Y por abuso de notación diremos que tal arreglo <i>"es"</i> la matriz.
@@ -232,13 +238,42 @@
 
         </div>
         <p> Usando la notación de arreglo bidimensional, se tiene lo siguiente:</p>
-        $$M+N=\left[\begin{array}{c l l}{{{M}_{11}}}&{{\cdots}}&{{{M}_{1m}}}\\ {{{M}_{21}}}&{{\cdots}}&{{{M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{M}_{n1}}}&{{\cdots}}&{{{M}_{n m}}}\end{array}\right]
-        + \left[\begin{array}{c l l}{{{N}_{11}}}&{{\cdots}}&{{{N}_{1m}}}\\ {{{N}_{21}}}&{{\cdots}}&{{{N}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{N}_{n1}}}&{{\cdots}}&{{{N}_{n m}}}\end{array}\right]
-        = \left[\begin{array}{c l l}{{{M}_{11}+{N}_{11}}}&{{\cdots}}&{{{M}_{1m}+{N}_{1m}}}\\ {{{M}_{21}+{N}_{21}}}&{{\cdots}}&{{{M}_{2m}+{N}_{2m}}}\\ {{\vdots}}&{{\cdots}}&{{\vdots}}\\ {{{M}_{n1}+{N}_{n1}}}&{{\cdots}}&{{{M}_{n m}+{N}_{n m}}}\end{array}\right]
+        $$M+N=
+        \begin{bmatrix}
+        M_{11} &amp; \cdots &amp; M_{1m}\\
+        M_{21} &amp; \cdots &amp; M_{2m}\\
+        \vdots &amp; \ddots &amp; \vdots \\
+        M_{n1} &amp; \cdots &amp; M_{nm}
+        \end{bmatrix}+
+        \begin{bmatrix}
+        N_{11} &amp; \cdots &amp; N_{1m}\\
+        N_{21} &amp; \cdots &amp; N_{2m}\\
+        \vdots &amp; \ddots &amp; \vdots \\
+        N_{n1} &amp; \cdots &amp; N_{nm}
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+        M_{11}+N_{11} &amp; \cdots &amp; M_{1m}+N_{1m}\\
+        M_{21}+N_{21} &amp; \cdots &amp; M_{2m}+N_{2m}\\
+        \vdots &amp; \ddots &amp; \vdots \\
+        M_{n1}+N_{n1} &amp; \cdots &amp; M_{nm}+N_{nm}
+        \end{bmatrix}
         $$
 
-        $$\alpha M=\alpha\left[\begin{array}{c l l}{{{M}_{11}}}&{{\cdots}}&{{{M}_{1m}}}\\ {{{M}_{21}}}&{{\cdots}}&{{{M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{M}_{n1}}}&{{\cdots}}&{{{M}_{n m}}}\end{array}\right]
-        =\left[\begin{array}{c l l}{{{\alpha M}_{11}}}&{{\cdots}}&{{{\alpha M}_{1m}}}\\ {{{\alpha M}_{21}}}&{{\cdots}}&{{{\alpha M}_{2m}}}\\ {{\vdots}}&{{\ddots}}&{{\vdots}}\\ {{{\alpha M}_{n1}}}&{{\cdots}}&{{{\alpha M}_{n m}}}\end{array}\right]$$
+        $$\alpha M=\alpha
+        \begin{bmatrix}
+        M_{11} &amp; \cdots &amp; M_{1m}\\
+        M_{21} &amp; \cdots &amp; M_{2m}\\
+        \vdots &amp; \ddots &amp; \vdots \\
+        M_{n1} &amp; \cdots &amp; M_{nm}
+        \end{bmatrix}=
+        \begin{bmatrix}
+        \alpha M_{11} &amp; \cdots &amp; \alpha M_{1m}\\
+        \alpha M_{21} &amp; \cdots &amp; \alpha M_{2m}\\
+        \vdots &amp; \ddots &amp; \vdots \\
+        \alpha M_{n1} &amp; \cdots &amp; \alpha M_{nm}
+        \end{bmatrix}
+        $$
     </div>
 
     <p>
