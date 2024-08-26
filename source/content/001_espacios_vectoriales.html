@@ -314,6 +314,36 @@
         <section data-type="sect3">
         <h3>Subespacios</h3>
         
+        <div class="definition">
+        <b>Subespacio</b>
+        <p>
+        Sean $V$ un $\mathbb{F}$-espacio vectorial y $W \subseteq V$. $W$ se denomina subespacio de $V$ si $W$ es un 
+        $\mathbb{F}$-espacio vectorial con las operaciones de suma y producto por escalar heredadas de $V.$
+        En tal caso, se denotará por $W \leq V$.
+        </p>
+
+        </div>
+        <p>
+        Sean $V$ un $\mathbb{F}$-espacio vectorial y $W \subseteq V$. Notemos que puesto que cada $u,v,w \in W$ satisface que
+        $u,v,w \in V$, entonces se satisfacen las propiedades de conmutatividad, asociatividad, distributividad por suma de
+        escalares y suma de vectores, pseudoasociatividad y acción de la unidad. Por lo tanto, para asegurar que $W$ sea un
+        subespacio de $V$, debemos verificar las propiedades faltantes, las cuales son cerraduras, existencia del 0 y la
+        existencia del inverso.
+        </p>
+        <p>
+        Supongamos que $W$ es un conjunto cerrado bajo la suma y producto por escalar, es decir, para cada par $v, w \in W$ 
+        y cada $\alpha\in\mathbb{F}$ se cumple que $v+w\in W$ y $\alpha v\in W$. Si $0 \in W$, entonces para cada $v\in W$,
+        $-v = 0+(-1)v \in W$. Si para cada $v \in W$ existe $-v\in W$, entonces $0= v+(-v) \in W$. Por lo tanto, $0 \in W$
+        si y solo si $W$ contiene inversos.
+        </p>
+
+        <div class="theorem">
+        <b> Caracterización de los espacios vectoriales</b>
+        <p>
+        Sean $V$ un $\mathbb{F}$-espacio vectorial y $W \subseteq W$. Entonces $W \leq V$ si y solo si es cerrado bajo suma
+        y producto por escalar y $0\in W$.
+        </p>
+        </div>
         </section>
         
         <section data-type="sect3">
